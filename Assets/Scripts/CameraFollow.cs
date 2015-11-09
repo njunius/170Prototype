@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour {
     Vector3 cameraOffset;
 	// Use this for initialization
 	void Start () {
+        //Cursor.visible = false;
         cameraOffset = new Vector3(0.0f, -0.4f, 1.5f);
         transform.position = positionTarget.transform.position - cameraOffset;
 
