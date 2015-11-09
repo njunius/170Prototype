@@ -28,5 +28,7 @@ public class ShotMover : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         startDestroy = true;
+        GetComponents<AudioSource>()[1].Play();
+
     }
 }
