@@ -1,23 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
+    bool shielded;
     bool locked;
     bool switched;
     public GameObject target;
     public GameObject shot;
     public Transform shotSpawn;
+    public RectTransform shieldBarTransform;
     Rigidbody rb;
+    float cachedShieldY;
+    float cachedShieldX;
+    float shieldToBarMap;
     float velocity;
     float roll_velocity;
     int ROF;
+    int shieldChargeControl;
+    int shieldChargeMax;
+    int shieldRechargeDelay;
+    int shieldRechargeDelayReset;
 
 	// Use this for initialization
 	void Start () {
+        // shield control
+        shieldChargeControl = 0;
+        shieldRechargeDelay = shieldRechargeDelayReset = 4;
+        cachedShieldY = shieldBarTransform.position.y;
+        cachedShieldX = shieldBarTransform.position.x;
+        shieldChargeMax = 180;
+        shieldToBarMap = -shieldBarTransform.rect.width / shieldChargeMax;
+        // fire control
         ROF = 5;
+        // camera control
         locked = false;
         switched = false;
+        // movement control
         rb = GetComponent<Rigidbody>();
         velocity = 20.0f;
         roll_velocity = 5.0f;
@@ -26,6 +46,9 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
+        Debug.Log(cachedShieldX + shieldChargeControl * shieldToBarMap);
+        shieldBarTransform.position = new Vector3(cachedShieldX + shieldChargeControl * shieldToBarMap, cachedShieldY, 0);
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             locked = !locked;
@@ -41,10 +64,35 @@ public class PlayerController : MonoBehaviour {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             ROF = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !shielded && shieldChargeControl == 0)
+        {
+            shielded = true;
+        }
     }
     
 	void FixedUpdate () {
         ++ROF;
+        if (shielded)
+        {
+            ++shieldChargeControl;
+            if(shieldChargeControl > shieldChargeMax)
+            {
+                shieldChargeControl = shieldChargeMax;
+                shielded = false;
+            }
+        }
+        else if(!shielded && shieldChargeControl > 0)
+        {
+            if(shieldRechargeDelay % shieldRechargeDelayReset == 0)
+            {
+                --shieldChargeControl;
+                shieldRechargeDelay = 0;
+            }
+            ++shieldRechargeDelay;
+        }
+
+        // movement based on camera type
         if (!locked)
         {
             rb.velocity = Vector3.zero;
