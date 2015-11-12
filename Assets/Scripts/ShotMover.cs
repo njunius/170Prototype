@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class ShotMover : MonoBehaviour {
-    Rigidbody rb;
-    public GameObject shooter;
+
     public AudioSource destroySound;
     public AudioSource fireSound;
     bool startDestroy;
@@ -15,9 +14,7 @@ public class ShotMover : MonoBehaviour {
         startDestroy = false;
         destroyTimer = 120;
         lifeTimer = 250;
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * 40 + transform.forward * Mathf.Abs(shooter.GetComponent<Rigidbody>().velocity.z);
-	}
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
