@@ -17,10 +17,10 @@ public class BombTextController : MonoBehaviour {
 	void Update () {
         bombToPercentage = (player.numBulletsCollected() / player.numBulletsNeeded()) * 100f;
         if(bombToPercentage == 100)
-            bombArmingText.text = "Bomb Armed: " + bombToPercentage.ToString("000.00") + "%";
+            bombArmingText.text = "Bomb Energy: " + bombToPercentage.ToString("000.00") + "%";
         else if(bombToPercentage < 10)
-            bombArmingText.text = "Bomb Armed: " + bombToPercentage.ToString("0.00") + "%";
+            bombArmingText.text = "Bomb Energy: " + bombToPercentage.ToString("0.00") + "%";
         else
-            bombArmingText.text = "Bomb Armed: " + bombToPercentage.ToString("00.00") + "%";
+            bombArmingText.text = "Bomb Energy: " + bombToPercentage.ToString("00.00") + "%";
     }
 }
