@@ -27,5 +27,12 @@ public class WinOrDie : MonoBehaviour {
             gameOver.text = "You Died";
             gameOver.color = new Color(1, 0, 0);
         }
+
+        if(win || dead){
+            if (Input.GetKey(KeyCode.L))
+                Application.LoadLevel("PrototypeRoom1");
+            if (Input.GetKey(KeyCode.Escape))
+                Application.Quit();
+        }
     }
 }
