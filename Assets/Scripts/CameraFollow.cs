@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Cursor.visible = false;
-        cameraOffset = new Vector3(0.0f, -0.4f, 1.5f);
+        cameraOffset = new Vector3(0.0f, -0.7f, 3.0f);
         transform.position = positionTarget.transform.position - cameraOffset;
 
         transform.LookAt(lookAtTarget.transform);
