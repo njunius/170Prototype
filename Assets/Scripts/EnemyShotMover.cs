@@ -24,24 +24,24 @@ public class EnemyShotMover : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent("PlayerController"))
+        PlayerController player = (PlayerController)GameObject.FindGameObjectWithTag("Player").GetComponent("PlayerController");
+        if (other.gameObject.GetComponent("PlayerController") || other.gameObject.tag == "Shield")
         {
             Debug.Log(other.gameObject.GetComponent("PlayerController"));
 
-            PlayerController player = (PlayerController)other.gameObject.GetComponent("PlayerController");
             if (player.isShielded())
             {
                 player.collectBullet();
                 Debug.Log(player.numBulletsCollected());
             }
-            else
-            {
-                player.die();
-                GameObject tempText = GameObject.FindGameObjectWithTag("GameOverText");
-                WinOrDie temp = (WinOrDie) tempText.GetComponent("WinOrDie");
-                temp.dead = true;
-            }
 
+        }
+        if (other.gameObject.GetComponent("PlayerController") && !player.isShielded())
+        {
+            player.die();
+            GameObject tempText = GameObject.FindGameObjectWithTag("GameOverText");
+            WinOrDie temp = (WinOrDie)tempText.GetComponent("WinOrDie");
+            temp.dead = true;
         }
         Destroy(gameObject);
     }
