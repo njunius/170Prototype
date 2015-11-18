@@ -13,8 +13,6 @@ public class ShieldOnOff : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.isShielded());
-        //Debug.Log(GetComponent<MeshRenderer>().enabled);
         if (player.isShielded())
             GetComponent<MeshRenderer>().enabled = true;
         else

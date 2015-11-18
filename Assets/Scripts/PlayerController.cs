@@ -97,12 +97,18 @@ public class PlayerController : MonoBehaviour {
 
             if (Input.GetKey(KeyCode.Mouse0) && ROF > 4)
             {
+                // make direction and velocity vectors local for easy addition of components
+                Vector3 localForward = transform.InverseTransformDirection(transform.forward);
+                Vector3 localVelocity = new Vector3(0, 0, transform.InverseTransformDirection(rb.velocity).z);
                 GameObject newShot = (GameObject)Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-                newShot.GetComponent<Rigidbody>().velocity = transform.forward * 40 + rb.velocity;
+                //Debug.Log(transform.InverseTransformDirection(rb.velocity));
+                //Debug.Log(transform.InverseTransformDirection(transform.forward));
+                // add constant forward velocity to newShot and add the player's forward velocity component
+                newShot.GetComponent<Rigidbody>().velocity = transform.TransformDirection(localForward * 40 + localVelocity);
                 ROF = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftControl) && !shielded && shieldChargeControl == 0)
+            if (Input.GetKeyDown(KeyCode.Mouse1) && !shielded && shieldChargeControl == 0)
             {
                 shielded = true;
             }
