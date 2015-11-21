@@ -11,8 +11,8 @@ public class EnemyShotMover : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        transform.LookAt(target);
-        rb.velocity = transform.forward * 50;
+        //transform.LookAt(target);
+        rb.velocity = transform.forward * 20;
     }
 
     void FixedUpdate()
@@ -43,6 +43,7 @@ public class EnemyShotMover : MonoBehaviour
             WinOrDie temp = (WinOrDie)tempText.GetComponent("WinOrDie");
             temp.dead = true;
         }
-        Destroy(gameObject);
+        if(other.gameObject.tag != "Bullet")
+            Destroy(gameObject);
     }
 }

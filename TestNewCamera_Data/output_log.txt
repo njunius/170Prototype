@@ -2,61 +2,34 @@ Initialize engine version: 5.2.2f1 (3757309da7e7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 870M   (ID=0x1199)
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1185)
     Vendor:   NVIDIA
-    VRAM:     6063 MB
+    VRAM:     1475 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.036 seconds
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.032 seconds
+desktop: 1920x1200 59Hz; virtual: 3840x1235 at 0,-35
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: D:\Documents\Santa Cruz\CM170\170Prototype\TestNewCamera_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\njunius\Documents\170Prototype\TestNewCamera_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 18b4 -> priority: 1 
-  Thread -> id: 1fa8 -> priority: 1 
+  Thread -> id: 1334 -> priority: 1 
+  Thread -> id: 4a4 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.267897 ms
+UnloadTime: 3.123783 ms
 
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 289.
-Total: 0.241197 ms (FindLiveObjects: 0.027492 ms CreateObjectMapping: 0.009897 ms MarkObjects: 0.192811 ms  DeleteObjects: 0.008797 ms)
-
-Null
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Player (PlayerController)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Null
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Null
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Null
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Null
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
-
-Player (PlayerController)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+Total: 0.202088 ms (FindLiveObjects: 0.021684 ms CreateObjectMapping: 0.007228 ms MarkObjects: 0.163537 ms  DeleteObjects: 0.007830 ms)
 
 Null
  
@@ -86,7 +59,7 @@ Null
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
-Null
+Player (PlayerController)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
@@ -110,11 +83,95 @@ Null
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
 Null
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
 Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Player (PlayerController)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
