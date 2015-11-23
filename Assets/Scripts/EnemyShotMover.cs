@@ -13,6 +13,7 @@ public class EnemyShotMover : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         //transform.LookAt(target);
         rb.velocity = transform.forward * 20;
+        
     }
 
     void FixedUpdate()
