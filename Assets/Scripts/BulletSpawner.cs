@@ -6,11 +6,9 @@ public class BulletSpawner : MonoBehaviour {
     public GameObject shot;
     public Transform target;
     int ROF;
-    int deltaAngle;
 	// Use this for initialization
 	void Start () {
         ROF = 40;
-        deltaAngle = 0;
 	}
 
     // Update is called once per frame
@@ -20,9 +18,12 @@ public class BulletSpawner : MonoBehaviour {
         transform.Rotate(transform.forward, 5);
         if(ROF == 40)
         {
-            for (int i = -20; i < 20; i += 10)
+            for (int i = -20; i < 20; i += 5)
             {
-                Instantiate(shot, transform.position, Quaternion.AngleAxis(i, transform.up));
+                GameObject clone = (GameObject) Instantiate(shot, transform.position, transform.rotation);
+                // spread bullets out along a plane that rotates every shot
+                clone.transform.Rotate(transform.forward, i);
+
             }
             ROF = -1;
         }        
